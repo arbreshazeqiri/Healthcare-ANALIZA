@@ -46,9 +46,9 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <div className="flex flex-col p-12 gap-6">
+    <div id="contact-us" className="flex flex-col p-12 gap-6">
       <div className="flex lg:flex-row flex-col gap-12 lg:justify-between items-center">
-        <div className="flex items-center">
+        <div className="flex items-center lg:self-start">
           <div>
             <Image
               height={180}

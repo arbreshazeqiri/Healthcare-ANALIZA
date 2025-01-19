@@ -2,16 +2,12 @@ import { useState } from "react";
 import Image from "next/image";
 import { Typography } from "../ui/typography";
 import { Button } from "../ui/button";
-import {
-  HoverCard,
-  HoverCardTrigger,
-  HoverCardContent,
-} from "../ui/hover-card";
+import { HoverCard, HoverCardTrigger } from "../ui/hover-card";
 import Link from "next/link";
 
 const navLinks = [
   {
-    href: "/services",
+    href: "#services",
     label: "SHËRBIMET",
     submenu: [
       {
@@ -66,10 +62,10 @@ const navLinks = [
       { href: "/services/fizioterapi", label: "Fizioterapi" },
     ],
   },
-  { href: "/staff", label: "STAFI" },
-  { href: "/about-us", label: "RRETH NESH" },
-  { href: "/blog", label: "BLOG" },
-  { href: "/contact-us", label: "KONTAKTI" },
+  { href: "#staff", label: "STAFI" },
+  { href: "#about-us", label: "RRETH NESH" },
+  // { href: "/blog", label: "BLOG" },
+  { href: "#contact-us", label: "KONTAKTI" },
 ];
 
 export const Header = () => {
@@ -88,7 +84,10 @@ export const Header = () => {
             />
           </div>
           <div className="flex-col place-items-center">
-            <Typography variant="h5" className="text-[#3C454C] lg:text-xl text-sm -mb-2">
+            <Typography
+              variant="h5"
+              className="text-[#3C454C] lg:text-xl text-sm -mb-2"
+            >
               HEALTHCARE
             </Typography>
             <Typography
@@ -100,7 +99,7 @@ export const Header = () => {
           </div>
         </div>
       </Link>
-      <div className="hidden lg:flex lg:gap-12 items-center">
+      <div className="hidden lg:flex lg:gap-6 md:gap-4 xl:gap-12 items-center">
         {navLinks.map((link) => (
           <HoverCard key={link.label} openDelay={0} closeDelay={0}>
             <HoverCardTrigger href={link.href}>
@@ -111,7 +110,7 @@ export const Header = () => {
                 {link.label}
               </Typography>
             </HoverCardTrigger>
-            {link.submenu && (
+            {/* {link.submenu && (
               <HoverCardContent className="rounded-none flex flex-col gap-4 -mr-40">
                 {link.submenu.map((sublink) => (
                   <div key={sublink.label}>
@@ -152,7 +151,7 @@ export const Header = () => {
                   </div>
                 ))}
               </HoverCardContent>
-            )}
+            )} */}
           </HoverCard>
         ))}
       </div>
@@ -182,7 +181,13 @@ export const Header = () => {
               </Link>
             ))}
             <div className="mt-4">
-              <Button>CAKTO TERMININ</Button>
+              <a
+                href="https://www.instagram.com/healthcare.analiza"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>CAKTO TERMININ</Button>
+              </a>
             </div>
           </div>
         </div>
