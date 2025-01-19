@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Image from "next/image";
 import { Typography } from "../ui/typography";
 import { Button } from "../ui/button";
@@ -19,7 +20,7 @@ const navLinks = [
         subsubmenu: [
           {
             href: "/services/metabolizmi_dhe_nutricioni/nutricioni",
-            label: "Majtet trupore",
+            label: "Matjet trupore",
           },
           {
             href: "/services/metabolizmi_dhe_nutricioni/metabolizmi",
@@ -72,8 +73,10 @@ const navLinks = [
 ];
 
 export const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className="flex justify-evenly p-4">
+    <div className="flex lg:justify-evenly justify-between p-4 items-center">
       <Link href={"/"} passHref>
         <div className="flex items-center gap-4">
           <div>
@@ -85,19 +88,19 @@ export const Header = () => {
             />
           </div>
           <div className="flex-col place-items-center">
+            <Typography variant="h5" className="text-[#3C454C] lg:text-xl text-sm -mb-2">
+              HEALTHCARE
+            </Typography>
             <Typography
               variant="h3"
-              className="text-[#02A6AB] font-medium -mb-2"
+              className="text-[#02A6AB] text-2xl lg:text-5xl font-medium -mt-2"
             >
               ANALIZA
-            </Typography>
-            <Typography variant="h5" className="text-[#3C454C] text-xl -mt-2">
-              HEALTH & NUTRITION
             </Typography>
           </div>
         </div>
       </Link>
-      <div className="flex gap-12 items-center">
+      <div className="hidden lg:flex lg:gap-12 items-center">
         {navLinks.map((link) => (
           <HoverCard key={link.label} openDelay={0} closeDelay={0}>
             <HoverCardTrigger href={link.href}>
@@ -153,9 +156,37 @@ export const Header = () => {
           </HoverCard>
         ))}
       </div>
-      <div className="flex items-center">
+      <div className="hidden lg:flex items-center">
         <Button>CAKTO TERMININ</Button>
       </div>
+      <div className="lg:hidden">
+        <button onClick={() => setMenuOpen(!menuOpen)}>
+          <div className="space-y-2">
+            <span className="block w-8 h-1 bg-gray-600"></span>
+            <span className="block w-8 h-1 bg-gray-600"></span>
+            <span className="block w-8 h-1 bg-gray-600"></span>
+          </div>
+        </button>
+      </div>
+      {menuOpen && (
+        <div className="h-full absolute top-28 left-0 w-full bg-white shadow-lg z-50 lg:hidden">
+          <div className="flex flex-col p-4">
+            {navLinks.map((link) => (
+              <Link key={link.label} href={link.href} passHref>
+                <Typography
+                  variant="nav"
+                  className="py-2 px-4 text-gray-700 hover:bg-gray-100 cursor-pointer"
+                >
+                  {link.label}
+                </Typography>
+              </Link>
+            ))}
+            <div className="mt-4">
+              <Button>CAKTO TERMININ</Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

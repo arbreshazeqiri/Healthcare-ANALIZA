@@ -7,7 +7,7 @@ import { Facebook, Instagram, Youtube } from "lucide-react";
 const contactInfo = [
   {
     label: "Kontakti",
-    details: ["healthcare.analiza@hotmail.com", "+383 48 256 990"],
+    details: ["healthcare.analiza@gmail.com", "+383 48 256 990"],
   },
   {
     label: "Adresa",
@@ -47,22 +47,22 @@ const socialLinks = [
 export const Footer = () => {
   return (
     <div className="flex flex-col p-12 gap-6">
-      <div className="flex justify-between items-center">
+      <div className="flex lg:flex-row flex-col gap-12 lg:justify-between items-center">
         <div className="flex items-center">
           <div>
             <Image
-              height={200}
-              width={170}
+              height={180}
+              width={140}
               src="/logos/logo-dark.png"
               alt="Healthcare Analiza Logo"
             />
           </div>
-          <div className="flex-col">
-            <Typography variant="h3" className="font-medium -mb-2">
-              ANALIZA
+          <div className="flex-col w-full text-center">
+            <Typography variant="h5" className="text-xl text-center -mb-2">
+              HEALTHCARE
             </Typography>
-            <Typography variant="h5" className="text-xl -mt-2">
-              HEALTH & NUTRITION
+            <Typography variant="h3" className="font-medium -mt-2">
+              ANALIZA
             </Typography>
           </div>
         </div>
@@ -80,11 +80,11 @@ export const Footer = () => {
             </div>
           ))}
         </div>
-        <div>
+        <div className="lg:h-[350px] lg:w-[350px] w-full h-[300px]">
           <Maps />
         </div>
       </div>
-      <div className="flex justify-between px-6">
+      <div className="flex lg:flex-row flex-col-reverse text-center lg:text-left justify-between px-6">
         <Typography variant="body-sm">
           Copyright © 2025 Healthcare Analiza
         </Typography>
