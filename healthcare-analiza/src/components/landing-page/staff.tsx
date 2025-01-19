@@ -34,7 +34,7 @@ const staff = [
   {
     name: "Vesa Bislimi",
     image: "vesa-bislimi.png",
-    title: "Infermiere",
+    title: "Nutricioniste",
   },
 ];
 

@@ -21,7 +21,6 @@ const contactInfo = [
     details: [
       "E hënë - E premte: 08:00 - 20:00",
       "E shtune: 08:00 - 16:00",
-      "E diel: Mbyllur",
     ],
   },
 ];

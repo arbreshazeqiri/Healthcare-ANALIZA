@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Healthcare ANALIZA",
-  description: "Nutrition and Clinical ",
+  description: "Health & Clinical Nutrition Center in Prishtina.",
 };
 
 export default function RootLayout({
