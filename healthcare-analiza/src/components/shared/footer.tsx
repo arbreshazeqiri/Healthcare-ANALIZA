@@ -18,10 +18,7 @@ const contactInfo = [
   },
   {
     label: "Orari i punës",
-    details: [
-      "E hënë - E premte: 08:00 - 20:00",
-      "E shtune: 08:00 - 16:00",
-    ],
+    details: ["E hënë - E premte: 08:00 - 20:00", "E shtune: 08:00 - 16:00"],
   },
 ];
 
@@ -45,14 +42,14 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <div id="contact-us" className="flex flex-col p-12 gap-6">
+    <div id="contact-us" className="flex flex-col py-6 w-[80%] gap-6 self-center">
       <div className="flex lg:flex-row flex-col gap-12 lg:justify-between items-center">
         <div className="flex items-center lg:self-start">
           <div>
             <Image
               height={180}
               width={140}
-              src="/logos/logo-dark.png"
+              src="/logos/logo.jpeg"
               alt="Healthcare Analiza Logo"
             />
           </div>
@@ -65,25 +62,25 @@ export const Footer = () => {
             </Typography>
           </div>
         </div>
-        <div className="flex flex-col gap-4">
-          {contactInfo.map(({ label, details }) => (
-            <div key={label} className="flex flex-col gap-2">
-              <Typography variant="h6" className="font-semibold">
-                {label}
-              </Typography>
-              {details.map((detail, index) => (
-                <Typography key={index} variant="body-sm">
-                  {detail}
+          <div className="flex flex-col gap-2 lg:self-start">
+            {contactInfo.map(({ label, details }) => (
+              <div key={label} className="flex flex-col gap-2 text-center lg:text-left">
+                <Typography variant="h6" className="font-semibold">
+                  {label}
                 </Typography>
-              ))}
-            </div>
-          ))}
-        </div>
-        <div className="lg:h-[350px] lg:w-[350px] w-full h-[300px]">
-          <Maps />
-        </div>
+                {details.map((detail, index) => (
+                  <Typography key={index} variant="body-sm">
+                    {detail}
+                  </Typography>
+                ))}
+              </div>
+            ))}
+          </div>
+          <div className="lg:h-[350px] lg:w-[350px] w-full h-[300px]">
+            <Maps />
+          </div>
       </div>
-      <div className="flex lg:flex-row flex-col-reverse text-center lg:text-left justify-between px-6">
+      <div className="flex lg:flex-row flex-col-reverse text-center lg:text-left justify-between px-3">
         <Typography variant="body-sm">
           Copyright © 2025 Healthcare Analiza
         </Typography>

@@ -31,21 +31,21 @@ export default function Functions() {
       {features.map((feature, index) => (
         <div
           key={index}
-          className="flex flex-col gap-4 items-center h-full lg:h-[300px]"
+          className="flex flex-col gap-4 items-center h-full lg:h-[300px] lg:w-[280px]"
         >
           <Image
             src={feature.imgSrc}
-            height={140}
-            width={140}
+            height={160}
+            width={160}
             alt={feature.imgAlt}
           />
           <div className="flex flex-col gap-2 items-center h-full">
-            <Typography variant="h6" className="font-semibold text-md">
+            <Typography variant="h6" className="font-semibold text-lg">
               {feature.title}
             </Typography>
             <Typography
               variant="body-sm"
-              className="w-[250px] text-center font-medium"
+              className="w-[260px] text-center font-medium"
             >
               {feature.description}
             </Typography>

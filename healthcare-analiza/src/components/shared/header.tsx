@@ -77,7 +77,7 @@ export const Header = () => {
         <div className="flex items-center gap-4">
           <div>
             <Image
-              src="/favicon.png"
+              src="/logos/logo.jpeg"
               width={80}
               height={80}
               alt="Healthcare Analiza Logo"
@@ -156,7 +156,7 @@ export const Header = () => {
         ))}
       </div>
       <div className="hidden lg:flex items-center">
-        <Button>CAKTO TERMININ</Button>
+        <Button className="rounded-xl">CAKTO TERMININ</Button>
       </div>
       <div className="lg:hidden">
         <button onClick={() => setMenuOpen(!menuOpen)}>
@@ -186,7 +186,7 @@ export const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button>CAKTO TERMININ</Button>
+                <Button className="rounded-xl">CAKTO TERMININ</Button>
               </a>
             </div>
           </div>
