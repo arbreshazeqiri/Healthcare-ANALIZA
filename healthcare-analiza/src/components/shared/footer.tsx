@@ -12,7 +12,7 @@ const contactInfo = [
   {
     label: "Adresa",
     details: [
-      "Rrethi, 1 Bulevardi Dëshmorët e Kombit",
+      "Rrethi 1, Bulevardi Dëshmorët e Kombit",
       "10000 Pristina, Kosovo",
     ],
   },

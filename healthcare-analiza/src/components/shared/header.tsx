@@ -65,7 +65,7 @@ const navLinks = [
   { href: "#staff", label: "STAFI" },
   { href: "#about-us", label: "RRETH NESH" },
   // { href: "/blog", label: "BLOG" },
-  { href: "#contact-us", label: "KONTAKTI" },
+  { href: "/contact-us", label: "KONTAKTI" },
 ];
 
 export const Header = () => {
